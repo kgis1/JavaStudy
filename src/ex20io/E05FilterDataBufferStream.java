@@ -6,6 +6,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 public class E05FilterDataBufferStream {
 
@@ -16,7 +17,7 @@ public class E05FilterDataBufferStream {
 
 		try {
 			//1.파일생성을 위한 파일 출력 스트림 생성
-			FileOutputStream out = new FileOutputStream(src);
+			OutputStream out = new FileOutputStream(src);
 			//2.버퍼 사용을 위한 필터스트림 생성
 			BufferedOutputStream bufFilterOut = new BufferedOutputStream(out);
 			//3.파일에 기본자료형 데이터를 저장하기 위한 필터스트림 생성
@@ -32,10 +33,8 @@ public class E05FilterDataBufferStream {
 			
 			//3개의 스트림을 한꺼번에 생성한다. 
 			DataInputStream dataFilterIn = new DataInputStream(
-												new BufferedInputStream(
-													new FileInputStream(src)
-												)
-											);
+										new BufferedInputStream(
+									new FileInputStream(src)));
 			
 			//기본자료형 데이터를 읽어옴
 			int intNum1 = dataFilterIn.readInt();

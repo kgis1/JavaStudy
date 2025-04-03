@@ -17,7 +17,11 @@ public class Friend {
 		System.out.print(", 전화번호:"+ phone);
 		System.out.print(", 주소:"+ addr);
 	}
-	//오버라이딩을 목적으로 정의한 메서드
+	//오버라이딩을 목적으로 정의한 메서드 
 	public void showBasicInfo() {}
 }
+
+
+
+
 

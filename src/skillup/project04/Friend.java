@@ -26,3 +26,7 @@ abstract public class Friend implements IFriend {
 	public void showBasicInfo() {}
 }
 
+
+
+
+

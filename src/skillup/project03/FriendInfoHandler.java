@@ -64,20 +64,27 @@ public class FriendInfoHandler {
 	public void showAllData() {
 		//System.out.println("showAllData 호출됨");
 		//배열에 저장된 정보의 갯수만큼 반복 
-		for(int i=0 ; i<numOfFriends ; i++) {
-				myFriends[i].showAllData();			
+		for(int i=0 ; i<numOfFriends ; i++) {			 
+			myFriends[i].showAllData();
 		}
 		System.out.println("##전체정보가 출력되었습니다##");
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//간략 정보 출력 
 	public void showSimpleData() {
 		//System.out.println("showSimpleData 호출됨");
-		
-		for(int i=0 ; i<numOfFriends ; i++) {
-				myFriends[i].showBasicInfo();				
-			}	
-			
-		
+		for(int i=0 ; i<numOfFriends ; i++) {			 
+			myFriends[i].showBasicInfo();
+		}
 		System.out.println("##간략정보가 출력되었습니다##");
 	}
 
@@ -92,13 +99,8 @@ public class FriendInfoHandler {
 		//저장된 정보의 갯수만큼 반복 
 		for(int i=0 ; i<numOfFriends ; i++) {
 			//검색할 이름과 일치하는지 확인 
-			if(searchName.compareTo(myFriends[i].name)==0) {	 
-				if(myFriends[i] instanceof UnivFriend) {
-					((UnivFriend)myFriends[i]).showAllData();			
-				}
-				else if (myFriends[i] instanceof HighFriend) {
-					((HighFriend)myFriends[i]).showAllData();	
-				}
+			if(searchName.compareTo(myFriends[i].name)==0) {
+				myFriends[i].showAllData();
 				System.out.println("##귀하가 요청하는 정보를 찾았습니다.##");
 				//정보를 찾았다면 true로 변경 
 				isFind = true; 
